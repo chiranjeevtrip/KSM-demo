@@ -8,6 +8,7 @@ data "template_file" "index" {
         index_env = var.env
     }
 }
+# creating a compute engine instance
 resource "google_compute_instance" "web" {
   name = "web-server-${var.env}"
   machine_type = "e2-medium"
